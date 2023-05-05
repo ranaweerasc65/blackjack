@@ -252,9 +252,9 @@ class BlackjackGame(Frame):
         self._scoreboardButton.grid(row = 0, column = 3)
 
 
-        if (outcome == "Congrats! You win!" or outcome == "Blackjack! You Win!"):
+        if (outcome == "Congrats! You win!" or outcome == "Blackjack! You Win!"or outcome =="Dealer busts, you win!"):
             self._updateDatabase("winnings", 1)
-        elif(outcome =="Dealer Blackjack! You lose!" or outcome =="You bust and lose!"):
+        elif(outcome =="Dealer Blackjack! You lose!" or outcome =="You bust and lose!"or outcome =="Dealer wins :("):
             self._updateDatabase("losses", 1)
 
 
