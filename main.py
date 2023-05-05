@@ -163,9 +163,6 @@ def show_scoreboard(self):
     db.close()
 
 
-    
-
-
 class BlackjackGame(Frame):
 
     def __init__(self,game_window,username, password):
@@ -255,9 +252,9 @@ class BlackjackGame(Frame):
         self._scoreboardButton.grid(row = 0, column = 3)
 
 
-        if outcome == "You win!":
+        if (outcome == "Congrats! You win!" or outcome == "Blackjack! You Win!"):
             self._updateDatabase("winnings", 1)
-        else:
+        elif(outcome =="Dealer Blackjack! You lose!" or outcome =="You bust and lose!"):
             self._updateDatabase("losses", 1)
 
 
